@@ -39,17 +39,23 @@ $ python app.py
 1. **Open git bash and navigate to this directory**
 
 2. **Create a virtual environment**
-```python -m venv env```
+```
+$python -m venv env
+```
 If you normally use py or python3 instead of python to run python files use that instead.
 
 3. **Activate the virtual environment**
-```source env/Scripts/activate```
+```
+$source env/Scripts/activate
+```
 You will have to do this every time you open a new terminal.
 
 4. **Install Flask (and the other dependencies)**
-```pip install -r requirements.txt```
+```
+$pip install -r requirements.txt
+```
 
 5. **Run the Flask server!**
 ```
-python app.py
+$python app.py
 ```
