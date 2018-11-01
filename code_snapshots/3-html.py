@@ -14,32 +14,32 @@ def category():
     categories = requests.get('http://jservice.io/api/categories', {
         'count': 10
     })
-	category_json = categories.json()
-	return categories.text
+    category_json = categories.json()
+    return categories.text
 
 @app.route('/category/<category_id>')
 def category_question(category_id = None):
     questions = requests.get('http://jservice.io/api/category/', {
         'id': category_id
     }).json()['clues']
-	question_obj = random.choice(questions)
-	question, answer = question_obj['question'], question_obj['answer']
-	return question + ' ' + answer
+    question_obj = random.choice(questions)
+    question, answer = question_obj['question'], question_obj['answer']
+    return question + ' ' + answer
 
 @app.route('/question')
 def question():
     question_obj = requests.get('http://jservice.io/api/random').json()[0]
-	question, answer = question_obj['question'], question_obj['answer']
-	return question + ' ' + answer
+    question, answer = question_obj['question'], question_obj['answer']
+    return question + ' ' + answer
 
 @app.route('/answer')
 def check_answer():
     real_answer = 'Yes'
-	input_answer = 'Yes'
-	if real_answer.lower() == input_answer.lower():
-    	return 'Correct'
-	else :
-    	return 'Incorrect'
+    input_answer = 'Yes'
+    if real_answer.lower() == input_answer.lower():
+        return 'Correct'
+    else :
+        return 'Incorrect'
 
 if __name__ == '__main__':
-	app.run(debug = True)
+    app.run(debug = True)
