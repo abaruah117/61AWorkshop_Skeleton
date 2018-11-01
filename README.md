@@ -1,18 +1,18 @@
 # Setup Instructions
 ---
 ## Mac
-1. **Install [Brew](https://brew.sh/)**
+1. **Install [Brew](https://brew.sh/)** (if not already installed)
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-2. **Install [pip](https://pip.pypa.io/)**
+2. **Install [pip](https://pip.pypa.io/)** (if not already installed)
 ```
 $ [sudo] easy_install pip
 $ pip --version
 ```
 
-3. **Install [virtualenv](https://virtualenv.pypa.io/en/latest/)**
+3. **Install [virtualenv](https://virtualenv.pypa.io/en/latest/)** (if not already installed)
 ```
 $ [sudo] pip install virtualenv
 $ virtualenv --version
