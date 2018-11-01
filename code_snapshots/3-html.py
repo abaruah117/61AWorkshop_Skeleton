@@ -1,6 +1,5 @@
 import os
-from flask
-import Flask, render_template, g, request
+from flask import Flask, render_template, g, request
 import requests
 import random
 
@@ -15,8 +14,8 @@ def category():
     categories = requests.get('http://jservice.io/api/categories', {
         'count': 10
     })
-	category_json = categories.json()
-	return categories.text
+    category_json = categories.json()
+    return categories.text
 
 
 @app.route('/question')
@@ -34,11 +33,11 @@ def get_random_question(category_id=None):
 @app.route('/answer')
 def check_answer():
     real_answer = 'Yes'
-	input_answer = 'Yes'
-	if real_answer.lower() == input_answer.lower():
-    	return 'Correct'
-	else :
-    	return 'Incorrect'
+    input_answer = 'Yes'
+    if real_answer.lower() == input_answer.lower():
+        return 'Correct'
+    else :
+        return 'Incorrect'
 
 if __name__ == '__main__':
-	app.run(debug = True)
+    app.run(debug = True)
