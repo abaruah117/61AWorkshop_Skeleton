@@ -1,5 +1,5 @@
 # Setup Instructions
----
+
 ## Mac
 1. **Install [Brew](https://brew.sh/)** (if not already installed)
 ```
