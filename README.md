@@ -34,4 +34,22 @@ $ python app.py
 ```
 
 ## Windows
-(TBD)
+0. You should already have python3 and pip installed from the first CS61A lab. To confirm that you have pip run `pip -V` and make sure it outputs something like pip 9.0.1 from... (it's okay if the version number is a little different).
+
+1. **Open git bash and navigate to this directory**
+
+2. **Create a virtual environment**
+```python -m venv env```
+If you normally use py or python3 instead of python to run python files use that instead.
+
+3. **Activate the virtual environment**
+```source env/Scripts/activate```
+You will have to do this every time you open a new terminal.
+
+4. **Install Flask (and the other dependencies)**
+```pip install -r requirements.txt```
+
+5. **Run the Flask server!**
+```
+python app.py
+```
